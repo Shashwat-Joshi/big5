@@ -184,6 +184,7 @@ export const actions = {
         dateStamp: Date.now()
       }
 
+      // Mongo Result id
       const { id } = await this.$axios.$post(process.env.API_URL + 'save', result)
       localStorage.setItem('resultId', id)
 
