@@ -73,6 +73,7 @@ export default {
       const url = process.env.API_URL + 'result/' + params.id + lang
 
       const data = await $axios.$get(url)
+      await $axios.$post('https://intellied-api.herokuapp.com/v1/bigfive/' + params.id, data.results)
 
       return {
         results: data.results,
